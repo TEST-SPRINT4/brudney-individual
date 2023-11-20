@@ -13,7 +13,7 @@ open class Main {
 
             val repository = repository()
             val script = ScriptPython()
-            script.execScript()
+            Scripts().executar
             repository.iniciar()
 
             while (true) {
