@@ -1,6 +1,5 @@
 package app
 import LoocaAPI
-import ScriptPython
 import repository
 import java.time.LocalDateTime
 import javax.swing.JOptionPane
@@ -12,24 +11,22 @@ open class Main {
         fun main(args: Array<String>) {
 
             val repository = repository()
-            val script = ScriptPython()
-            Scripts().executar
             repository.iniciar()
 
             while (true) {
-                val opcao = JOptionPane.showInputDialog(
-                    """
-                Bem vindo ao menu de captura TEST!
-                Selecione:
-                        
-            1 - Capturar dados.
-            2 - Fechar o programa.
-
-                            """.trimIndent()
-                ).toInt()
-
-                when (opcao) {
-                    1 -> {
+//                val opcao = JOptionPane.showInputDialog(
+//                    """
+//                Bem vindo ao menu de captura TEST!
+//                Selecione:
+//
+//            1 - Capturar dados.
+//            2 - Fechar o programa.
+//
+//                            """.trimIndent()
+//                ).toInt()
+//
+//                when (opcao) {
+//                    1 -> {
 
                         val looca = LoocaAPI()
 
@@ -73,12 +70,11 @@ open class Main {
 
                     }
 
-                    2 -> {
-                        JOptionPane.showMessageDialog(null,"Até mais!")
-                        System.exit(0)
-                    }
+//                    2 -> {
+//                        JOptionPane.showMessageDialog(null,"Até mais!")
+//                        System.exit(0)
+//                    }
                 }
             }
         }
-    }
-}
+
