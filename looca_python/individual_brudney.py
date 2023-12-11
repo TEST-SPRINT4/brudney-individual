@@ -1,4 +1,3 @@
-import mysql.connector #biblioteca responsável pela conexão com o mysql
 import time
 from datetime import datetime
 import psutil
